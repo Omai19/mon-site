@@ -558,9 +558,9 @@
   </div>
 
   <h1 class="hero-title">Omaïma Belgacem</h1>
-  <p class="hero-subtitle">Future Ingénieure en Cybersécurité</p>
-  <a href="#about" class="cta-button">Découvrir mon profil 🚀</a>
-</div>
+  <p class="hero-subtitle">Étudiante ingénieure spécialisée en Cybersécurité</p>
+  <p style="margin-bottom: 20px;">Recherche de premier stage chez Schneider Electric</p>
+<a href="#about" class="cta-button">Découvrir mon profil 🚀</a>
 
         
         <div class="scroll-indicator">
@@ -851,84 +851,102 @@
 </div>
 
 <!-- Sous-bulles -->
-<div class="timeline-item right sub-project">
+<div class="timeline-item sub-project">
     <div class="timeline-dot"></div>
     <div class="timeline-content sub-bubble">
-        <h4>1er projet-BDD</h4>
-        <p>Conception d'une base de données relationnelle (MySQL).</p>
+        <h4>1er projet - Conception et Sécurisation d'une Base de donnée</h4>
+        <p>Modéliser et implémenter une BDD relationnelle robuste et sécurisée</p>
     </div>
 </div>
 
-<div class="timeline-item right sub-project">
+<div class="timeline-item sub-project">
     <div class="timeline-dot"></div>
     <div class="timeline-content sub-bubble">
-        <h4>2ème projet – Transmission de données par ondes</h4>
-        <p>Codage et décodage d'un signal, utilisation d'arduino et du langage Python pour décrypter un message</p>
+        <h4>2ème projet – Système de communication sécurisée par ondes radio</h4>
+        <p>Développement d'un protocole de transmission chiffrée avec déchiffrement automatisé</p>
     </div>
 </div>
 
-<div class="timeline-item right sub-project">
+<div class="timeline-item sub-project">
     <div class="timeline-dot"></div>
     <div class="timeline-content sub-bubble">
-        <h4>3ème projet – Projet mécanique</h4>
-        <p>Création d'une page interactive afin de permettre aux clients de choisir la voiture la plus performantes</p>
+        <h4>3ème projet – Plateforme Interactive de comparaison Automobile</h4>
+        <p>Développer une interface utilisateur sécurisée avec des traitements de données</p>
     </div>
 </div>
 
-<div class="timeline-item right sub-project">
+<div class="timeline-item sub-project">
     <div class="timeline-dot"></div>
     <div class="timeline-content sub-bubble">
-        <h4>4ème projet – Projet industriel</h4>
-        <p>Conception d'un boîtier capable de mesurer la qualité de l'air, étude fonctionnelle, prototypage et bilan financier pour une mise sur le marché.</p>
+        <h4>4ème projet – Capteur IoT de Qualité de l'Air</h4>
+        <p>Concevoir un dispositif IoT sécurisé avec analyse de viabilité commerciale</p>
     </div>
 </div>
 
 <style>
-
-   .timeline-item.right.main-project {
-    justify-content: flex-end;
-    margin-left: 50%;
-    margin-bottom: 40px;
+/* Style commun pour sous-projets */
+.timeline-item.sub-project {
     display: flex;
     align-items: center;
-    flex-direction: row-reverse; /* Permet de placer la bulle à droite */
-    max-width: 700px; /* Largeur de la bulle (modifie cette valeur si nécessaire) */
-}
-
-
-/* Positionnement des sous-projets à droite */
-.timeline-item.right.sub-project {
-    justify-content: flex-end;
-    margin-left: 50%;
     margin-bottom: 15px;
-}
-
-/* Forme différente pour les sous-bulles */
-.timeline-content.sub-bubble {
-    border-radius: 25px 5px 25px 25px; /* Forme asymétrique */
+    max-width: 700px;
     position: relative;
-    margin-right: 30px;
 }
 
-/* Garde le même style de couleur neutre */
+/* Alternance gauche/droite des bulles */
+.timeline-item.sub-project:nth-child(odd) {
+    justify-content: flex-start;
+    margin-right: 40%; /* Rapproche de la frise */
+}
+
+.timeline-item.sub-project:nth-child(even) {
+    justify-content: flex-end;
+    margin-left: 40%;  /* Rapproche de la frise */
+    flex-direction: row-reverse;
+}
+
+/* Style des bulles */
 .timeline-content.sub-bubble {
+    border-radius: 25px 5px 25px 25px;
     background: rgba(41, 240, 190, 0.374);
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 15px 20px;
+    max-width: 350px;
 }
 
-/* Ajustement responsive */
-@media (max-width: 768px) {
-    .timeline-item.right.sub-project {
-        margin-left: 0;
-        justify-content: center;
-    }
-    
-    .timeline-content.sub-bubble {
-        margin-right: 0;
-    }
+/* Point sur la frise */
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #00d4aa;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-item.sub-project {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        justify-content: center !important;
+        flex-direction: row !important;
+    }
+    .timeline-content.sub-bubble {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .timeline-dot {
+        left: 10px;
+        transform: none;
+    }
+
+
+
+
+
 </style>
 
 </div>
